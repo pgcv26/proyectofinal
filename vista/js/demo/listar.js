@@ -95,12 +95,10 @@ $(document).ready(function () {
         {data:"ProNombre"},
         {data:"ProPaginaweb"},
         {data:"id_ciudad"},
-        {data:"Telnumero"},
-        {data:"DirDireccion"},
         ],
         columnDefs: [
           {
-              targets: 5,
+              targets: 3,
               render: function (data, type, row) {
                       return '<button  type="button" id="eliminar" class="btn btn-danger">Eliminar</button>' +
                       '<a href="fromagregarproveedor.php?id=<?php echo data;[id] ?>" class = "btn btn-warning">Actualizar</a> ';

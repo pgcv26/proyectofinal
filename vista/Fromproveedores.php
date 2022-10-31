@@ -34,8 +34,6 @@ $conexion = new conexion();
                                         <th>Nombre</th>
                                         <th>Pagina web</th>
                                         <th>ciudad</th>
-                                        <th>Telefono</th>
-                                        <th>Direccion</th>
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>

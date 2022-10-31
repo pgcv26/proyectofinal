@@ -32,22 +32,16 @@
     <div class="container ">
 
         <form class="row " action= "../controler/registrar/registrarproveedor.php" method="POST">
+        
             <div class="col-6">
-                <label form="nombreinput" class="form-label" >Direccion:</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ingrese direccion">
-            </div>
-            <div class="col-6">
-                <label form="nombreinput" class="form-label" >Nombres Nombre:</label>
+                <label form="nombreinput" class="form-label" > Nombre:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese direccion">
             </div>
             <div class="col-6">
                 <label form="nombreinput" class="form-label" >Nombres Pagina:</label>
                 <input type="text" class="form-control" id="pagina" name="pagina" placeholder="Ingrese direccion">
             </div>
-            <div class="col-6">
-                <label form="nombreinput" class="form-label" >$telefono:</label>
-                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingrese direccion">
-            </div>
+           
             <div class="col-6">
                 <label >Ciudad:</label>
                 <select  class="form-control"name="ciudad" id="ciudad" placeholder="Rol"></select>
