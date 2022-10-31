@@ -94,14 +94,15 @@ $(document).ready(function () {
         columns: [
         {data:"ProNombre"},
         {data:"ProPaginaweb"},
-        {data:"id_ciudad"},
+        {data:"telefono"},
+        {data:"CiuCiudad"},
         ],
         columnDefs: [
           {
-              targets: 3,
+              targets: 4,
               render: function (data, type, row) {
                       return '<button  type="button" id="eliminar" class="btn btn-danger">Eliminar</button>' +
-                      '<a href="fromagregarproveedor.php?id=<?php echo data;[id] ?>" class = "btn btn-warning">Actualizar</a> ';
+                      '<a href="actualizarproveedor.php?id=<?php echo data;[id] ?>" class = "btn btn-warning">Actualizar</a> ';
                       
               },
               visible: true,

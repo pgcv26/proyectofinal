@@ -33,6 +33,7 @@ $conexion = new conexion();
                                     <tr>
                                         <th>Nombre</th>
                                         <th>Pagina web</th>
+                                        <th>Telefono</th>
                                         <th>ciudad</th>
                                         <th>Opciones</th>
                                     </tr>
