@@ -92,11 +92,11 @@ $(document).ready(function () {
         processing: true,
         ajax: "../controler/obtener/listarprovedor.php",
         columns: [
-        {data:"DirDireccion"},
         {data:"ProNombre"},
-        {data:"CiuCiudad"},
         {data:"ProPaginaweb"},
-        {data:"telnumero"},
+        {data:"id_ciudad"},
+        {data:"Telnumero"},
+        {data:"DirDireccion"},
         ],
         columnDefs: [
           {
