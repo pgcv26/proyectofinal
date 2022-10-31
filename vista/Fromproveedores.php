@@ -31,11 +31,10 @@ $conexion = new conexion();
                                 <table class="m-7" id="provedor">
                                 <thead>
                                     <tr>
-                                        <th>Direccion</th>
                                         <th>Nombre</th>
-                                        <th>Ciudad</th>
-                                        <th>Paginaweb</th>
+                                        <th>Pagina web</th>
                                         <th>Telefono</th>
+                                        <th>ciudad</th>
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>

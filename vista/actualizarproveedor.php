@@ -27,12 +27,15 @@
         </div>
       </nav>
 
-    <h1 class="text-center">Registro Proveedores</h1>
+    <h1 class="text-center">Actualizar Proveedores</h1>
         <br>
     <div class="container ">
 
-        <form class="row " action= "../controler/registrar/registrarproveedor.php" method="POST">
-        
+        <form class="row " action= "../controler/actualizar/actualizarproveedor.php" method="POST">
+        <div class="col-6">
+                <label form="nombreinput" class="form-label" > id proveedor:</label>
+                <input type="text" class="form-control" id="idproveedor" name="idproveedor" placeholder="Ingrese direccion">
+            </div>
             <div class="col-6">
                 <label form="nombreinput" class="form-label" > Nombre:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese direccion">
@@ -53,7 +56,7 @@
             </div>
             
             <div class="col-6">
-            <button type="submit" class="btn btn-success" >Guardar</button>
+            <button type="submit" class="btn btn-success" >Actualizar</button>
             </div>
             
         </form>

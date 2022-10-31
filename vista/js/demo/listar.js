@@ -92,18 +92,17 @@ $(document).ready(function () {
         processing: true,
         ajax: "../controler/obtener/listarprovedor.php",
         columns: [
-        {data:"DirDireccion"},
         {data:"ProNombre"},
-        {data:"CiuCiudad"},
         {data:"ProPaginaweb"},
-        {data:"telnumero"},
+        {data:"telefono"},
+        {data:"CiuCiudad"},
         ],
         columnDefs: [
           {
-              targets: 5,
+              targets: 4,
               render: function (data, type, row) {
                       return '<button  type="button" id="eliminar" class="btn btn-danger">Eliminar</button>' +
-                      '<a href="fromagregarproveedor.php?id=<?php echo data;[id] ?>" class = "btn btn-warning">Actualizar</a> ';
+                      '<a href="actualizarproveedor.php?id=<?php echo data;[id] ?>" class = "btn btn-warning">Actualizar</a> ';
                       
               },
               visible: true,
