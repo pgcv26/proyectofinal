@@ -19,9 +19,9 @@ $conexion = new conexion();
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Lista Usuarios</h1>
 
-                    <div class="col-log-3" >
-                        <a href="fromagregarusuario.php" class="btn btn-success btn-sm mb3">Agregar Usuarios</a>
-                    </div>
+                    <button type="button" class="btn btn-success btn-sm mb3" data-bs-toggle="modal"
+             data-bs-target="#agregarusuario">Agregar Usuarios</button>
+
                     <br>
                     <!-- DataTales Example -->
                     
@@ -45,8 +45,134 @@ $conexion = new conexion();
                       
 
                 </div>
+              
+
+         <!-- Modal para agregar usuarios-->
+         <form class="row" action= "../controler/registrar/registrarusuarios.php" method="POST">
+         <div class="modal fade" id="agregarusuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Usuarios</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="col-12">
+                <label form="cedulainput" class="form-label" >Cedula:</label>
+                <input type="number" class="form-control" id="identificacion"  name="identificacion" placeholder="Ingrese Cedula">
+                     </div>
+            <div class="col-12">
+                <label form="nombreinput" class="form-label" >Nombres:</label>
+                <input type="nombre" class="form-control" id="nombre"  name="nombre" placeholder="Ingrese Nombres">
+            </div>
+            <div class="col-12">
+                <label form="nombreinput" class="form-label" >Apellido:</label>
+                <input type="nombre" class="form-control"id="apellido"  name="apellido" placeholder="Ingrese apellido">
+            </div>
+
+            <div class="col-12">
+                <label form="apellidosinput" class="form-label" >Nombre usuario:</label>
+                <input type="apellido" class="form-control" id="nombreusuario"  name="nombreusuario" placeholder="Ingrese nombre usuario">
+            </div>
+
+            <div class="col-12">
+                <label form="contraseñainput" class="form-label" >Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena"  name="contrasena" placeholder="Ingrese contraseña">
+            </div>
+
+            <div class="col-12">
+                <label form="contraseñainput" class="form-label" >Correo:</label>
+                <input type="email" class="form-control" id="correo"  name="correo" placeholder="Ingrese correo">
+            </div>
+            <div class="col-12">
+                <label form="contraseñainput" class="form-label" >telefono:</label>
+                <input type="number" class="form-control" id="telefono"  name="telefono" placeholder="Ingrese Telefono">
+            </div>
+            <div class="col-12">
+                <label form="contraseñainput" class="form-label" >direccion:</label>
+                <input type="number" class="form-control" id="direccion"  name="direccion" placeholder="Ingrese Direccion">
+            </div>
+
+            <div class="col-12">
+                <label >Rol:</label>
+                <select  class="form-control"name="roltipo" id="roltipo"  placeholder="Rol"></select>
+            </div>
+
+            <div class="col-12">
+                <label >Ciudad:</label>
+                <select  class="form-control"name="ciudad" id="ciudad"  placeholder="Rol"></select>
+            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salir</button>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+         </form>
+
+
+
+            <!-- Modal para actualizar usuarios-->
+      <form class="row" action= "../controler/actualizar/actualizarusuarios.php" method="POST">
+            <div class="modal fade" id="actualizarusuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar usuario </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                   
+                        <div class="col-12">
+                        <input type="hidden" class="form-control" id="actualizaridentificacion" name="actualizaridentificacion" placeholder="Ingrese Cedula" value="<?=$identificacion['identificacion']?>">
+                        </div>
+                        <div class="col-12">
+                            <label form="nombreinput" class="form-label" >Nombres:</label>
+                            <input type="nombre" class="form-control" id="actualizarnombre"  name="actualizarnombre" placeholder="Ingrese Nombres">
+                        </div>
+                                
+                        <div class="col-12">
+                            <label form="apellidosinput" class="form-label" >Nombre usuario:</label>
+                            <input type="apellido" class="form-control" id="actualizarnombreusuario"  name="actualizarnombreusuario" placeholder="Ingrese nombre usuario">
+                        </div>
+
+                        <div class="col-12">
+                            <label form="contraseñainput" class="form-label" >Contraseña:</label>
+                            <input type="password" class="form-control" id="actualizarcontrasena"  name="actualizarcontrasena" placeholder="Ingrese contraseña">
+                        </div>
+
+                        <div class="col-12">
+                            <label form="contraseñainput" class="form-label" >Correo:</label>
+                            <input type="email" class="form-control" id="actualizarcorreo"  name="actualizarcorreo" placeholder="Ingrese correo">
+                        </div>
+                        <div class="col-12">
+                            <label form="contraseñainput" class="form-label" >telefono:</label>
+                            <input type="number" class="form-control" id="actualizartelefono"  name="actualizartelefono" placeholder="Ingrese Telefono">
+                        </div>
+                      
+                        <div class="col-12">
+                            <label >Rol:</label>
+                            <select  class="form-control"name="actualizarroltipo" id="actualizarroltipo"placeholder="Rol"></select>
+                        </div>
+
+                        <div class="col-12">
+                            <label >Ciudad:</label>
+                            <select  class="form-control"name="actualizarciudad" id="actualizarciudad"placeholder="Rol"></select>
+                        </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salir</button>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+      </form>
+
+     <script src= "js/demo/listar.js" ></script>  
+    <script src="js/demo/listaroles.js"></script>
             <?php require ('./layout/footerpaneladministrativo.php')?>   
           
-<script src= "../vista/js/demo/listar.js" ></script>   
+
 
 

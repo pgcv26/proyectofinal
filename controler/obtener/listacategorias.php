@@ -5,6 +5,9 @@ require ("../../database/database.php");
 $con  = new Conexion();
 $pdo = $con->getConexion();
 
+
+//$sql = "SELECT idCategoria FROM tblcategoria";
+
 $sql = "CALL listacategoria()";
 
 $stm = $pdo->query($sql);

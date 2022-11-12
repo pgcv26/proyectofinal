@@ -12,5 +12,5 @@
             // se asignas las variables llamadas desde el formulario 
             $categoria = $_POST['categoria'];
 
-            $sql = $con->query("INSERT INTO tblcategoria (CatNombre,id_provedor)VALUES ('$categoria')");
+            $sql = $con->query("INSERT INTO tblcategoria (CatNombre)VALUES ('$categoria')");
 ?>
