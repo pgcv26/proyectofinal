@@ -60,3 +60,45 @@ $(document).ready(function () {
             });
     }
 });
+
+
+// listar ciudades para actualizar para el formulario de proveedores 
+$(document).ready(function () {
+    ciudad();
+  
+    function ciudad() {
+        var selectciudad = $('#actualizarciudad');
+        $.get("../controler/obtener/listarciudad.php", {})
+            .done(function (data){
+                console.log(data);
+                var obj = $.parseJSON(data);
+  
+                selectciudad.append('<option value="-1" selected disabled>Seleccione ciudad')
+                $.each(obj, function (key, value){
+                    selectciudad.append('<option value="'+obj[key].idCiudad+'">'+obj[key].CiuCiudad+'</option>')
+                })
+  
+            });
+    }
+  });
+
+// listar roles  para actualizar para el formulario de usuario
+  $(document).ready(function () {
+ 
+    listaroles();
+
+    function listaroles() {
+              var selectRoles = $('#actualizarroltipo')
+              $.get("../controler/obtener/listarroles.php",{})
+              .done(function(data){
+                  console.log(data);
+                      var obj = $.parseJSON(data);
+                      selectRoles.append('<option value="-1" selected disabled>Seleccione el Rol</option>')
+                      $.each(obj, function (key, value){
+                      selectRoles.append('<option value="'+obj[key].IdRol+'">'+obj[key].RolTipo+'</option>')
+              });
+
+                   });
+          
+          }  
+});

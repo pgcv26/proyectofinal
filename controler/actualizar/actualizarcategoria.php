@@ -7,7 +7,7 @@ include_once "../../database/database.php";
    
     
     $idcategoria = $_POST['idcategoria'];
-    $categoria = $_POST['categoria'];
+    $categoria = $_POST['categoriaActualizar'];
     //$categoria ='otros';
             
             // tabla usuario update

@@ -6,22 +6,20 @@ include_once "../../database/database.php";
 
    
     
-    $identificacion = $_POST ['identificacion'];
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $nombreusuario = $_POST['nombreusuario'];
-    $contrasena = $_POST['contrasena'];
-    $rol = $_POST['roltipo'];
-    $correo = $_POST['correo'];
-    $telefono = $_POST['telefono'];
-    $direccion = $_POST['direccion'];
-    $ciudad = $_POST['ciudad'];
+    $identificacion = $_POST ['actualizaridentificacion'];
+    $nombre = $_POST['actualizarnombre'];
+    $nombreusuario = $_POST['actualizarnombreusuario'];
+    $contrasena = $_POST['actualizarcontrasena'];
+    $rol = $_POST['actualizarroltipo'];
+    $correo = $_POST['actualizarcorreo'];
+    $telefono = $_POST['actualizartelefono'];
+    $ciudad = $_POST['actualizarciudad'];
  
             
     
          
             // tabla usuario update
-            $sql="Update tblusuario Set UsuNombre='$nombre',UsuApellido='$apellido',
+            $sql="Update tblusuario Set UsuNombre='$nombre',
             UsuNombreUsuario='$nombreusuario',UsuContrasena='$contrasena', id_rol='$rol' Where identificacion='$identificacion'";
             $stm = $con->prepare($sql);
             $stm->bindParam(':identificacion',$identificacion);
@@ -37,7 +35,7 @@ include_once "../../database/database.php";
             $stm->bindParam(':Usuario_identificacion', $identificacion);
             $stm->execute();
              // tabla direccion update
-             $sql="Update tbldireccion Set DirDireccion='$direccion',id_ciudad='$ciudad' Where Usuario_identificacion='$identificacion' ";
+             $sql="Update tbldireccion Set id_ciudad='$ciudad' Where Usuario_identificacion='$identificacion' ";
              $stm = $con->prepare($sql);
              $stm->bindParam(':Usuario_identificacion', $identificacion);
              $stm->execute();
