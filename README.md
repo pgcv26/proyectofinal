@@ -3,9 +3,4 @@ proyectofinal sena
 
 [proyectofinal.zip](https://github.com/pgcv26/proyectofinal/files/10074999/proyectofinal.zip)
 [DB PROYECTO FINAL copia.zip](https://github.com/pgcv26/proyectofinal/files/10075142/DB.PROYECTO.FINAL.copia.zip)
-controler
-database
-index.php
-LICENSE
-README.md
-vista
+
